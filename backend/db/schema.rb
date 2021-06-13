@@ -14,10 +14,16 @@ ActiveRecord::Schema.define(version: 2021_06_08_040248) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
+    t.string "phone_number"
+    t.string "email"
   end
 
   create_table "comics", force: :cascade do |t|
     t.string "title"
+    t.string "publisher"
+    t.string "creators"
+    t.string "img_url"
+    t.float "price"
     t.integer "client_id"
   end
 
